@@ -483,7 +483,7 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
+      objectReference: {fileID: 2100000, guid: 81f6d387b9d5c994d9e291af97c84648, type: 2}
     - target: {fileID: 114700673106479202, guid: df84af96020c94b4695aec5c3427db16,
         type: 2}
       propertyPath: usePrimaryHover
@@ -504,6 +504,23 @@ Prefab:
       propertyPath: pressedColor.b
       value: 0.12481135
       objectReference: {fileID: 0}
+    - target: {fileID: 1329088948137194, guid: df84af96020c94b4695aec5c3427db16, type: 2}
+      propertyPath: m_Name
+      value: Cube UI Button Kb
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316441347922610, guid: df84af96020c94b4695aec5c3427db16, type: 2}
+      propertyPath: m_Name
+      value: Kb
+      objectReference: {fileID: 0}
+    - target: {fileID: 1691259700520998, guid: df84af96020c94b4695aec5c3427db16, type: 2}
+      propertyPath: m_Name
+      value: Cube Kb
+      objectReference: {fileID: 0}
+    - target: {fileID: 65051552092194264, guid: df84af96020c94b4695aec5c3427db16,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df84af96020c94b4695aec5c3427db16, type: 2}
   m_IsPrefabAsset: 0
@@ -521,7 +538,7 @@ GameObject:
   m_Component:
   - component: {fileID: 394657924}
   m_Layer: 0
-  m_Name: Cube UI Button Base BL
+  m_Name: Cube UI Button Base Bl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -570,6 +587,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &564814296 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1316441347922610, guid: df84af96020c94b4695aec5c3427db16,
+    type: 2}
+  m_PrefabInternal: {fileID: 575681124}
+--- !u!114 &564814301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 564814296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e651159181169e468591b505ea7b76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &575681124
 Prefab:
   m_ObjectHideFlags: 0
@@ -702,11 +735,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1316441347922610, guid: df84af96020c94b4695aec5c3427db16, type: 2}
       propertyPath: m_Name
-      value: Button Cube Y
+      value: Y
       objectReference: {fileID: 0}
     - target: {fileID: 1691259700520998, guid: df84af96020c94b4695aec5c3427db16, type: 2}
       propertyPath: m_Name
       value: Cube Y
+      objectReference: {fileID: 0}
+    - target: {fileID: 65051552092194264, guid: df84af96020c94b4695aec5c3427db16,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df84af96020c94b4695aec5c3427db16, type: 2}
@@ -747,6 +785,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 753073764}
     m_Modifications:
+    - target: {fileID: 114193398573130750, guid: df84af96020c94b4695aec5c3427db16,
+        type: 2}
+      propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4493201980653798, guid: df84af96020c94b4695aec5c3427db16, type: 2}
       propertyPath: m_LocalPosition.x
       value: -0.215
@@ -867,15 +910,41 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1316441347922610, guid: df84af96020c94b4695aec5c3427db16, type: 2}
       propertyPath: m_Name
-      value: Button Cube LB
+      value: LB
       objectReference: {fileID: 0}
     - target: {fileID: 1691259700520998, guid: df84af96020c94b4695aec5c3427db16, type: 2}
       propertyPath: m_Name
       value: Cube LB
       objectReference: {fileID: 0}
+    - target: {fileID: 114193398573130750, guid: df84af96020c94b4695aec5c3427db16,
+        type: 2}
+      propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114193398573130750, guid: df84af96020c94b4695aec5c3427db16,
+        type: 2}
+      propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df84af96020c94b4695aec5c3427db16, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &662212216 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1316441347922610, guid: df84af96020c94b4695aec5c3427db16,
+    type: 2}
+  m_PrefabInternal: {fileID: 1232156019}
+--- !u!114 &662212221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 662212216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2abaa3f36d472648b0be29129bacdd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &689870535
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,6 +1007,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &708893541 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1316441347922610, guid: df84af96020c94b4695aec5c3427db16,
+    type: 2}
+  m_PrefabInternal: {fileID: 1461484990}
+--- !u!114 &708893546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 708893541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d56c72d1d07ffe84dac0a733b1ce9a97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &753073763
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,15 +1335,36 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1316441347922610, guid: df84af96020c94b4695aec5c3427db16, type: 2}
       propertyPath: m_Name
-      value: Button Cube G
+      value: G
       objectReference: {fileID: 0}
     - target: {fileID: 1691259700520998, guid: df84af96020c94b4695aec5c3427db16, type: 2}
       propertyPath: m_Name
       value: Cube G
       objectReference: {fileID: 0}
+    - target: {fileID: 65051552092194264, guid: df84af96020c94b4695aec5c3427db16,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df84af96020c94b4695aec5c3427db16, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &973337449 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1316441347922610, guid: df84af96020c94b4695aec5c3427db16,
+    type: 2}
+  m_PrefabInternal: {fileID: 1962713687}
+--- !u!114 &973337454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 973337449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 975bbdd041f962049b5055058dfde964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1058906008
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,15 +1687,36 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1316441347922610, guid: df84af96020c94b4695aec5c3427db16, type: 2}
       propertyPath: m_Name
-      value: Button Cube R
+      value: R
       objectReference: {fileID: 0}
     - target: {fileID: 1691259700520998, guid: df84af96020c94b4695aec5c3427db16, type: 2}
       propertyPath: m_Name
       value: Cube R
       objectReference: {fileID: 0}
+    - target: {fileID: 65051552092194264, guid: df84af96020c94b4695aec5c3427db16,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df84af96020c94b4695aec5c3427db16, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1243480603 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1316441347922610, guid: df84af96020c94b4695aec5c3427db16,
+    type: 2}
+  m_PrefabInternal: {fileID: 597392927}
+--- !u!114 &1243480608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1243480603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a91ad8e630af74791c9f83d2f992e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1264856614
 GameObject:
   m_ObjectHideFlags: 0
@@ -1619,6 +1746,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1269354432 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1316441347922610, guid: df84af96020c94b4695aec5c3427db16,
+    type: 2}
+  m_PrefabInternal: {fileID: 1491161876}
+--- !u!114 &1269354437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1269354432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d15ce9f4085a77d47843db791b0fca5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1278794218 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1316441347922610, guid: df84af96020c94b4695aec5c3427db16,
+    type: 2}
+  m_PrefabInternal: {fileID: 867452599}
+--- !u!114 &1278794223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1278794218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4cc48a2c83886847bf54b630580f0ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1283093106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1969,11 +2128,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1316441347922610, guid: df84af96020c94b4695aec5c3427db16, type: 2}
       propertyPath: m_Name
-      value: Button Cube DB
+      value: DB
       objectReference: {fileID: 0}
     - target: {fileID: 1691259700520998, guid: df84af96020c94b4695aec5c3427db16, type: 2}
       propertyPath: m_Name
       value: Cube DB
+      objectReference: {fileID: 0}
+    - target: {fileID: 65051552092194264, guid: df84af96020c94b4695aec5c3427db16,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df84af96020c94b4695aec5c3427db16, type: 2}
@@ -2110,11 +2274,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1316441347922610, guid: df84af96020c94b4695aec5c3427db16, type: 2}
       propertyPath: m_Name
-      value: Button Cube Pi
+      value: Pi
       objectReference: {fileID: 0}
     - target: {fileID: 1691259700520998, guid: df84af96020c94b4695aec5c3427db16, type: 2}
       propertyPath: m_Name
       value: Cube Pi
+      objectReference: {fileID: 0}
+    - target: {fileID: 65051552092194264, guid: df84af96020c94b4695aec5c3427db16,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df84af96020c94b4695aec5c3427db16, type: 2}
@@ -2293,11 +2462,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1316441347922610, guid: df84af96020c94b4695aec5c3427db16, type: 2}
       propertyPath: m_Name
-      value: Button Cube LG
+      value: LG
       objectReference: {fileID: 0}
     - target: {fileID: 1691259700520998, guid: df84af96020c94b4695aec5c3427db16, type: 2}
       propertyPath: m_Name
       value: Cube LG
+      objectReference: {fileID: 0}
+    - target: {fileID: 65051552092194264, guid: df84af96020c94b4695aec5c3427db16,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df84af96020c94b4695aec5c3427db16, type: 2}
@@ -2312,7 +2486,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1545880498}
   - component: {fileID: 1545880499}
-  - component: {fileID: 1545880500}
   m_Layer: 0
   m_Name: Interaction Manager
   m_TagString: Untagged
@@ -2364,18 +2537,6 @@ MonoBehaviour:
   _contactBoneLayer:
     layerIndex: 11
   _drawControllerRuntimeGizmos: 0
---- !u!114 &1545880500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114685367921167028, guid: 33edf201cbc6fe645ad9078697cd2aea,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1545880497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1574214911 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4493201980653798, guid: df84af96020c94b4695aec5c3427db16,
@@ -2407,7 +2568,7 @@ RectTransform:
   m_GameObject: {fileID: 1599608853}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1863641992}
   m_RootOrder: 0
@@ -2437,7 +2598,7 @@ TextMesh:
   m_Font: {fileID: 0}
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
 --- !u!23 &1599608856
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2539,6 +2700,22 @@ Transform:
   m_Father: {fileID: 1545880498}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1622071671 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1316441347922610, guid: df84af96020c94b4695aec5c3427db16,
+    type: 2}
+  m_PrefabInternal: {fileID: 1734966020}
+--- !u!114 &1622071676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1622071671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 219daa83eb963284dbe7353790d722ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1665438468 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4493201980653798, guid: df84af96020c94b4695aec5c3427db16,
@@ -2808,15 +2985,36 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1316441347922610, guid: df84af96020c94b4695aec5c3427db16, type: 2}
       propertyPath: m_Name
-      value: Button Cube DG
+      value: DG
       objectReference: {fileID: 0}
     - target: {fileID: 1691259700520998, guid: df84af96020c94b4695aec5c3427db16, type: 2}
       propertyPath: m_Name
       value: Cube DG
       objectReference: {fileID: 0}
+    - target: {fileID: 65051552092194264, guid: df84af96020c94b4695aec5c3427db16,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df84af96020c94b4695aec5c3427db16, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1749436239 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1316441347922610, guid: df84af96020c94b4695aec5c3427db16,
+    type: 2}
+  m_PrefabInternal: {fileID: 1444296542}
+--- !u!114 &1749436244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1749436239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ceef8ece7cd6543b66e635db47a918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1753419288
 GameObject:
   m_ObjectHideFlags: 0
@@ -3014,11 +3212,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1316441347922610, guid: df84af96020c94b4695aec5c3427db16, type: 2}
       propertyPath: m_Name
-      value: Button Cube Pu
+      value: Pu
       objectReference: {fileID: 0}
     - target: {fileID: 1691259700520998, guid: df84af96020c94b4695aec5c3427db16, type: 2}
       propertyPath: m_Name
       value: Cube Pu
+      objectReference: {fileID: 0}
+    - target: {fileID: 65051552092194264, guid: df84af96020c94b4695aec5c3427db16,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df84af96020c94b4695aec5c3427db16, type: 2}
@@ -3214,6 +3417,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -0.2}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1866838896 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1316441347922610, guid: df84af96020c94b4695aec5c3427db16,
+    type: 2}
+  m_PrefabInternal: {fileID: 1825946218}
+--- !u!114 &1866838901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1866838896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be83e4a6416eb948a07b654e5082436, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1877382865
 GameObject:
   m_ObjectHideFlags: 0
@@ -3300,6 +3519,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4493201980653798, guid: df84af96020c94b4695aec5c3427db16,
     type: 2}
   m_PrefabInternal: {fileID: 1444296542}
+--- !u!1 &1948384546 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1316441347922610, guid: df84af96020c94b4695aec5c3427db16,
+    type: 2}
+  m_PrefabInternal: {fileID: 2021816580}
+--- !u!114 &1948384551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1948384546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667d0d064b9563540834e42da5b5a782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1962713687
 Prefab:
   m_ObjectHideFlags: 0
@@ -3432,11 +3667,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1316441347922610, guid: df84af96020c94b4695aec5c3427db16, type: 2}
       propertyPath: m_Name
-      value: Button Cube O
+      value: O
       objectReference: {fileID: 0}
     - target: {fileID: 1691259700520998, guid: df84af96020c94b4695aec5c3427db16, type: 2}
       propertyPath: m_Name
       value: Cube O
+      objectReference: {fileID: 0}
+    - target: {fileID: 65051552092194264, guid: df84af96020c94b4695aec5c3427db16,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df84af96020c94b4695aec5c3427db16, type: 2}
@@ -3588,7 +3828,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1329088948137194, guid: df84af96020c94b4695aec5c3427db16, type: 2}
       propertyPath: m_Name
-      value: Cube UI Button BL
+      value: Cube UI Button Bl
       objectReference: {fileID: 0}
     - target: {fileID: 65051552092194264, guid: df84af96020c94b4695aec5c3427db16,
         type: 2}
@@ -3597,11 +3837,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1316441347922610, guid: df84af96020c94b4695aec5c3427db16, type: 2}
       propertyPath: m_Name
-      value: Button Cube BL
+      value: Bl
       objectReference: {fileID: 0}
     - target: {fileID: 1691259700520998, guid: df84af96020c94b4695aec5c3427db16, type: 2}
       propertyPath: m_Name
-      value: Cube BL
+      value: Cube Bl
       objectReference: {fileID: 0}
     - target: {fileID: 114700673106479202, guid: df84af96020c94b4695aec5c3427db16,
         type: 2}
@@ -3773,6 +4013,24 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2116758748}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2119050945 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1316441347922610, guid: df84af96020c94b4695aec5c3427db16,
+    type: 2}
+  m_PrefabInternal: {fileID: 365394148}
+--- !u!114 &2119050950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2119050945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea0b12a0a5f7714b9cd1d91ff07fc29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stay: 1
+  fired: 0
 --- !u!1 &2129850906
 GameObject:
   m_ObjectHideFlags: 0
