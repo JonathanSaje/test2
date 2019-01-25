@@ -31,9 +31,12 @@ public class Kb : MonoBehaviour {
 			textControl.selectedAnswer = gameObject.name;
 			// textControl.choiceSelected = "y";
 
-			holdTimer = Random.Range(2,8);
+			holdTimer = Random.Range(1,7);
 			fired = false;
 
+		}
+		if (textControl.sceneName == "test0") {
+			holdTimer = Random.Range(1,4);
 		}
 
 	}

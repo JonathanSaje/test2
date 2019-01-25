@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class textControl : MonoBehaviour {
 
-    List<string> question = new List<string>() { "Hold The Keyboard Down", "Press Light Blue", "Press Dark Blue", "Press Purple", "Press Pink", "Press Red", "Press Orange", "Press Yellow", "Press Light Green", "Press Dark Green", "Press Grey", "Press Black"};
+    List<string> question = new List<string>() { "Hold The Keyboard Down", "Press Light Blue", "Press Dark Blue", "Press Purple", "Press Pink", "Press Red", "Press Orange", "Press Yellow", "Press Light Green", "Press Dark Green", "Press Grey", "Press Black", "Task Complete! Please take off your Headset"};
 
     List<string> correctAnswer = new List<string>() {"Kb", "LB", "DB", "Pu", "Pi", "R", "O", "Y", "LG", "DG", "G", "Bl" };
 
@@ -16,45 +17,80 @@ public class textControl : MonoBehaviour {
 
     public static int randQuestion = 0;
 
+    public static float timeLeft = 120.0f;
+
+    public static string sceneName;
+
+
 	// Use this for initialization
 	void Start () {
         //GetComponent<TextMesh>().text = question[0];
+        Scene currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
+        Debug.Log(sceneName);
+
+        if (sceneName == "test0") {
+            timeLeft = 30.0f;
+        }
 
 	}
 
 	// Update is called once per frame
 	void Update () {
 
+        timeLeft -= Time.deltaTime;
 
-
-        if (randQuestion == 0) {
-            GetComponent<TextMesh>().text = question[randQuestion];
+        if (timeLeft < 0) {
+            GetComponent<TextMesh>().text = question[12];
         }
+        else {
+            if (randQuestion == 0) {
+                GetComponent<TextMesh>().text = question[randQuestion];
+            }
 
-        if (randQuestion == -1) {
-            randQuestion = Random.Range(1,12);
-        }
-        if (randQuestion > -1){
-            GetComponent<TextMesh>().text = question[randQuestion];
+            if (randQuestion == -1) {
+                if (sceneName == "test0") {
+                    randQuestion = Random.Range(1,4);
+                }
+                if (sceneName == "test1" || sceneName == "test4") {
+                    randQuestion = Random.Range(1,12);
+                }
+                if (sceneName == "test2") {
+                    randQuestion = Random.Range(1,5);
+                }
+                if (sceneName == "test3") {
+                    randQuestion = Random.Range(1,8);
+                }
 
-            timeTaken += Time.deltaTime;
+            }
+            if (randQuestion > -1){
+                GetComponent<TextMesh>().text = question[randQuestion];
 
-        }
-        if (choiceSelected == "y") {
+                timeTaken += Time.deltaTime;
 
-            choiceSelected = "n";
+            }
+            if (choiceSelected == "y") {
 
-            if (correctAnswer[randQuestion]==selectedAnswer) {
-                Debug.Log( "y,"+timeTaken+","+selectedAnswer+","+correctAnswer[randQuestion]);
-                timeTaken = 0;
-                textControl.randQuestion = 0;
-            }else{
-                Debug.Log( "n,"+timeTaken+","+selectedAnswer+","+correctAnswer[randQuestion]);
-                timeTaken = 0;
-                textControl.randQuestion = 0;
+                choiceSelected = "n";
+                // Debug.Log(timeLeft);
+
+                if (correctAnswer[randQuestion]==selectedAnswer) {
+                    Debug.Log( "y,"+timeTaken+","+selectedAnswer+","+correctAnswer[randQuestion]);
+                    timeTaken = 0;
+                    textControl.randQuestion = 0;
+                }else{
+                    Debug.Log( "n,"+timeTaken+","+selectedAnswer+","+correctAnswer[randQuestion]);
+                    timeTaken = 0;
+                    textControl.randQuestion = 0;
+                }
+
             }
 
         }
+
+
+
+
 
 
 	}
