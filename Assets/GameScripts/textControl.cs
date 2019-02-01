@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -23,13 +24,29 @@ public class textControl : MonoBehaviour {
 
     public static ContactPoint contact;
 
+    public static string fileName;
+
+    public static string eval;
+
+    public static string testTime = System.DateTime.Now.ToString("dd_MM_yyyy_H-mm");
+
 
 	// Use this for initialization
+    // creates the file, sets the time limit if it is the trial test
 	void Start () {
+
         //GetComponent<TextMesh>().text = question[0];
         Scene currentScene = SceneManager.GetActiveScene();
         sceneName = currentScene.name;
         Debug.Log(sceneName);
+
+        fileName = sceneName + "_" + testTime + ".csv";
+        string filePath = getPath();
+        // Directory.CreateDirectory(filePath + fileName);
+        StreamWriter writer = new StreamWriter(filePath);
+        writer.WriteLine("Correct?,TimeTaken,ChosenAnswer,CorrectAnswer,Finger,X,Y,Z");
+        writer.Flush();
+        writer.Close();
 
         if (sceneName == "test0") {
             timeLeft = 30.0f;
@@ -42,7 +59,7 @@ public class textControl : MonoBehaviour {
 
         timeLeft -= Time.deltaTime;
 
-        // Sorts between test finished, hold kb and questions
+        // Sorts between test finished, hold kb and which questions to ask
         if (timeLeft < 0) {
             GetComponent<TextMesh>().text = question[12];
         }
@@ -70,22 +87,27 @@ public class textControl : MonoBehaviour {
             // Start timer for answering the question
             if (randQuestion > -1){
                 GetComponent<TextMesh>().text = question[randQuestion];
-
                 timeTaken += Time.deltaTime;
-
-
             }
+
+            // output the quantative data
             if (choiceSelected == "y") {
 
                 choiceSelected = "n";
                 // Debug.Log(timeLeft);
 
+                string contactCoords = contact.point.ToString("F3");
+                contactCoords = contactCoords.Substring(1, contactCoords.Length-2);
+
                 if (correctAnswer[randQuestion]==selectedAnswer) {
-                    Debug.Log( "y,"+timeTaken+","+selectedAnswer+","+correctAnswer[randQuestion]+","+contact.otherCollider+","+contact.point);
+
+                    eval =  "y,"+timeTaken+","+selectedAnswer+","+correctAnswer[randQuestion]+","+contact.otherCollider.name+","+contactCoords;
+                    Save();
                     timeTaken = 0;
                     textControl.randQuestion = 0;
                 }else{
-                    Debug.Log( "n,"+timeTaken+","+selectedAnswer+","+correctAnswer[randQuestion]+","+contact.otherCollider+","+contact.point);
+                    eval = "n,"+timeTaken+","+selectedAnswer+","+correctAnswer[randQuestion]+","+contact.otherCollider.name+","+contactCoords;
+                    Save();
                     timeTaken = 0;
                     textControl.randQuestion = 0;
                 }
@@ -94,10 +116,26 @@ public class textControl : MonoBehaviour {
 
         }
 
-
-
-
-
-
 	}
+
+    // appends the file
+    void Save(){
+
+        string filePath = getPath();
+        StreamWriter writer = new StreamWriter(filePath,true);
+        writer.WriteLine(eval);
+        writer.Flush();
+        writer.Close();
+
+
+
+    }
+
+    private string getPath () {
+
+        return Application.dataPath + "/output/" + fileName;
+
+    }
+
+
 }

@@ -22,7 +22,7 @@ public class Kb : MonoBehaviour {
 
 
 	}
-
+	// Checks that its hand collision, sets timer for holding as kb pushed
 	void OnCollisionEnter(Collision other) {
 		// Debug.Log (gameObject.name);
 
@@ -42,7 +42,7 @@ public class Kb : MonoBehaviour {
 
 	}
 
-
+	// counts down the hold, then fires next question
 	void OnCollisionStay(Collision collisionInfo) {
 
 		if (collisionInfo.gameObject.name == "Palm" || collisionInfo.gameObject.name == "ThumbTip" || collisionInfo.gameObject.name == "IndexTip" || collisionInfo.gameObject.name == "MiddleTip" ) {

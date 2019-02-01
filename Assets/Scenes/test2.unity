@@ -280,7 +280,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 92907736}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3ceef8ece7cd6543b66e635db47a918, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a91ad8e630af74791c9f83d2f992e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!54 &92907739
@@ -1052,22 +1052,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4493201980653798, guid: df84af96020c94b4695aec5c3427db16,
     type: 2}
   m_PrefabInternal: {fileID: 688845079}
---- !u!1 &688845081 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1316441347922610, guid: df84af96020c94b4695aec5c3427db16,
-    type: 2}
-  m_PrefabInternal: {fileID: 688845079}
---- !u!114 &688845082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 688845081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d56c72d1d07ffe84dac0a733b1ce9a97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &721208703
 GameObject:
   m_ObjectHideFlags: 0
@@ -2192,6 +2176,7 @@ GameObject:
   - component: {fileID: 1201134372}
   - component: {fileID: 1201134374}
   - component: {fileID: 1201134373}
+  - component: {fileID: 1201134375}
   m_Layer: 0
   m_Name: Pi
   m_TagString: Untagged
@@ -2240,6 +2225,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.059861064, y: 0.05234342, z: 0.019609114}
   m_Center: {x: 0, y: -4.098349e-19, z: -0.00053568324}
+--- !u!114 &1201134375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1201134371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a91ad8e630af74791c9f83d2f992e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1212008318
 Prefab:
   m_ObjectHideFlags: 0
@@ -2427,7 +2423,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1286380500}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8be83e4a6416eb948a07b654e5082436, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a91ad8e630af74791c9f83d2f992e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!54 &1286380503

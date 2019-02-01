@@ -5,26 +5,14 @@ using UnityEngine;
 
 public class LB : MonoBehaviour {
 
-		// List<string> lightBlue = new List<string>() {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11" };
-	// Use this for initialization
-
-
-
-
-
 	void Start () {
-
 	}
 
 	// Update is called once per frame
 	void Update () {
-
-		// if (textControl.randQuestion > -1){
-		// 	GetComponent<TextMesh>().text = lightBlue[textControl.randQuestion];
-		// }
-
 	}
 
+	 // Makes sure that the collision is with a hand, then sets quantative data we need
 	void OnCollisionEnter(Collision other) {
 		// Debug.Log (gameObject.name);
 
@@ -44,9 +32,7 @@ public class LB : MonoBehaviour {
 					textControl.contact = other.contacts[0];
 					textControl.selectedAnswer = gameObject.name;
 					textControl.choiceSelected = "y";
-				// textControl.randQuestion = 0;
 				}
-			// Debug.Log(contact.point);
 			}
 		}
 }
