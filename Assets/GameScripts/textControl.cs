@@ -21,6 +21,8 @@ public class textControl : MonoBehaviour {
 
     public static string sceneName;
 
+    public static ContactPoint contact;
+
 
 	// Use this for initialization
 	void Start () {
@@ -40,6 +42,7 @@ public class textControl : MonoBehaviour {
 
         timeLeft -= Time.deltaTime;
 
+        // Sorts between test finished, hold kb and questions
         if (timeLeft < 0) {
             GetComponent<TextMesh>().text = question[12];
         }
@@ -63,10 +66,13 @@ public class textControl : MonoBehaviour {
                 }
 
             }
+
+            // Start timer for answering the question
             if (randQuestion > -1){
                 GetComponent<TextMesh>().text = question[randQuestion];
 
                 timeTaken += Time.deltaTime;
+
 
             }
             if (choiceSelected == "y") {
@@ -75,11 +81,11 @@ public class textControl : MonoBehaviour {
                 // Debug.Log(timeLeft);
 
                 if (correctAnswer[randQuestion]==selectedAnswer) {
-                    Debug.Log( "y,"+timeTaken+","+selectedAnswer+","+correctAnswer[randQuestion]);
+                    Debug.Log( "y,"+timeTaken+","+selectedAnswer+","+correctAnswer[randQuestion]+","+contact.otherCollider+","+contact.point);
                     timeTaken = 0;
                     textControl.randQuestion = 0;
                 }else{
-                    Debug.Log( "n,"+timeTaken+","+selectedAnswer+","+correctAnswer[randQuestion]);
+                    Debug.Log( "n,"+timeTaken+","+selectedAnswer+","+correctAnswer[randQuestion]+","+contact.otherCollider+","+contact.point);
                     timeTaken = 0;
                     textControl.randQuestion = 0;
                 }

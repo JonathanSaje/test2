@@ -23,44 +23,41 @@ public class Kb : MonoBehaviour {
 
 	}
 
-	void OnTriggerEnter() {
+	void OnCollisionEnter(Collision other) {
 		// Debug.Log (gameObject.name);
 
+		if (other.gameObject.name == "Palm" || other.gameObject.name == "ThumbTip" || other.gameObject.name == "IndexTip" || other.gameObject.name == "MiddleTip" ) {
+			if (textControl.randQuestion == 0) {
+				textControl.selectedAnswer = gameObject.name;
+				// textControl.choiceSelected = "y";
 
-		if (textControl.randQuestion == 0) {
-			textControl.selectedAnswer = gameObject.name;
-			// textControl.choiceSelected = "y";
+				holdTimer = Random.Range(1,5);
+				fired = false;
 
-			holdTimer = Random.Range(1,7);
-			fired = false;
-
-		}
-		if (textControl.sceneName == "test0") {
-			holdTimer = Random.Range(1,4);
+			}
+			if (textControl.sceneName == "test0") {
+				holdTimer = Random.Range(1,4);
+			}
 		}
 
 	}
 
 
-	void OnTriggerStay() {
+	void OnCollisionStay(Collision collisionInfo) {
 
-		if (stay){
-			if (fired == false){
-				holdTimer -= Time.deltaTime;
-				// Debug.Log(holdTimer);
-				if(holdTimer < 0){
-					// Debug.Log ("fire");
-					textControl.randQuestion = -1;
-					fired = true;
+		if (collisionInfo.gameObject.name == "Palm" || collisionInfo.gameObject.name == "ThumbTip" || collisionInfo.gameObject.name == "IndexTip" || collisionInfo.gameObject.name == "MiddleTip" ) {
+			if (stay){
+				if (fired == false){
+					holdTimer -= Time.deltaTime;
+					// Debug.Log(holdTimer);
+					if(holdTimer < 0){
+						// Debug.Log ("fire");
+						textControl.randQuestion = -1;
+						fired = true;
 
+					}
 				}
 			}
-
 		}
-
 	}
-
-
-
-
 }
