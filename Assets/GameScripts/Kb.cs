@@ -26,7 +26,7 @@ public class Kb : MonoBehaviour {
 	void OnCollisionEnter(Collision other) {
 		// Debug.Log (gameObject.name);
 
-		if (other.gameObject.name == "Palm" || other.gameObject.name == "ThumbTip" || other.gameObject.name == "IndexTip" || other.gameObject.name == "MiddleTip" ) {
+		if (other.gameObject.name == "PalmL" || other.gameObject.name == "ThumbTipL" || other.gameObject.name == "IndexTipL" || other.gameObject.name == "MiddleTipL" || other.gameObject.name == "PalmR" || other.gameObject.name == "ThumbTipR" || other.gameObject.name == "IndexTipR" || other.gameObject.name == "MiddleTipR"  ) {
 			if (textControl.randQuestion == 0) {
 				textControl.selectedAnswer = gameObject.name;
 				// textControl.choiceSelected = "y";
@@ -45,7 +45,7 @@ public class Kb : MonoBehaviour {
 	// counts down the hold, then fires next question
 	void OnCollisionStay(Collision collisionInfo) {
 
-		if (collisionInfo.gameObject.name == "Palm" || collisionInfo.gameObject.name == "ThumbTip" || collisionInfo.gameObject.name == "IndexTip" || collisionInfo.gameObject.name == "MiddleTip" ) {
+		if (collisionInfo.gameObject.name == "PalmL" || collisionInfo.gameObject.name == "ThumbTipL" || collisionInfo.gameObject.name == "IndexTipL" || collisionInfo.gameObject.name == "MiddleTipL" || collisionInfo.gameObject.name == "PalmR" || collisionInfo.gameObject.name == "ThumbTipR" || collisionInfo.gameObject.name == "IndexTipR" || collisionInfo.gameObject.name == "MiddleTipR" ) {
 			if (stay){
 				if (fired == false){
 					holdTimer -= Time.deltaTime;

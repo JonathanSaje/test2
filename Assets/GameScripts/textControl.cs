@@ -30,6 +30,10 @@ public class textControl : MonoBehaviour {
 
     public static string testTime = System.DateTime.Now.ToString("dd_MM_yyyy_H-mm");
 
+    public static string buttonSize;
+
+    public static string localSpaceCollisionPoint;
+
 
 	// Use this for initialization
     // creates the file, sets the time limit if it is the trial test
@@ -44,7 +48,7 @@ public class textControl : MonoBehaviour {
         string filePath = getPath();
         // Directory.CreateDirectory(filePath + fileName);
         StreamWriter writer = new StreamWriter(filePath);
-        writer.WriteLine("Correct?,TimeTaken,ChosenAnswer,CorrectAnswer,Finger,X,Y,Z");
+        writer.WriteLine("Time,Test,Correct?,TimeTaken,ChosenAnswer,CorrectAnswer,Finger,WX,WY,WZ,ButSizeX,ButSizeY,ButSizeZ,LX,LY,LZ");
         writer.Flush();
         writer.Close();
 
@@ -99,16 +103,21 @@ public class textControl : MonoBehaviour {
                 string contactCoords = contact.point.ToString("F3");
                 contactCoords = contactCoords.Substring(1, contactCoords.Length-2);
 
+                // localSpaceCollisionPoint = localSpaceCollisionPoint.Substring(1, localSpaceCollisionPoint.Length-2);
+                buttonSize = buttonSize.Substring(1, buttonSize.Length-2);
+
                 if (correctAnswer[randQuestion]==selectedAnswer) {
 
-                    eval =  "y,"+timeTaken+","+selectedAnswer+","+correctAnswer[randQuestion]+","+contact.otherCollider.name+","+contactCoords;
+                    eval = testTime+","+sceneName+","+"y,"+timeTaken+","+selectedAnswer+","+correctAnswer[randQuestion]+","+contact.otherCollider.name+","+contactCoords+","+buttonSize+","+localSpaceCollisionPoint;
                     Save();
+                    // Debug.Log(hit.textureCoord);
                     timeTaken = 0;
                     textControl.randQuestion = 0;
                 }else{
-                    eval = "n,"+timeTaken+","+selectedAnswer+","+correctAnswer[randQuestion]+","+contact.otherCollider.name+","+contactCoords;
+                    eval = testTime+","+sceneName+","+"n,"+timeTaken+","+selectedAnswer+","+correctAnswer[randQuestion]+","+contact.otherCollider.name+","+contactCoords+","+buttonSize+","+localSpaceCollisionPoint;
                     Save();
                     timeTaken = 0;
+                    // Debug.Log(hit.textureCoord);
                     textControl.randQuestion = 0;
                 }
 
@@ -122,10 +131,15 @@ public class textControl : MonoBehaviour {
     void Save(){
 
         string filePath = getPath();
+        string filePathHard = getHardPath();
         StreamWriter writer = new StreamWriter(filePath,true);
+        StreamWriter writerHard = new StreamWriter(filePathHard,true);
         writer.WriteLine(eval);
+        writerHard.WriteLine(eval);
         writer.Flush();
+        writerHard.Flush();
         writer.Close();
+        writerHard.Close();
 
 
 
@@ -135,6 +149,11 @@ public class textControl : MonoBehaviour {
 
         return Application.dataPath + "/output/" + fileName;
 
+    }
+
+    private string getHardPath() {
+
+        return Application.dataPath + "/output/allData.csv";
     }
 
 

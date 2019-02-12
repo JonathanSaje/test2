@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 106505809}
   - component: {fileID: 106505808}
   m_Layer: 0
-  m_Name: Palm
+  m_Name: PalmR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -646,7 +646,7 @@ GameObject:
   - component: {fileID: 217822713}
   - component: {fileID: 217822712}
   m_Layer: 0
-  m_Name: MiddleTip
+  m_Name: MiddleTipR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -717,7 +717,7 @@ GameObject:
   - component: {fileID: 258262200}
   - component: {fileID: 258262199}
   m_Layer: 0
-  m_Name: Palm
+  m_Name: PalmL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -967,7 +967,7 @@ GameObject:
   - component: {fileID: 371850338}
   - component: {fileID: 371850337}
   m_Layer: 0
-  m_Name: IndexTip
+  m_Name: IndexTipL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1277,7 +1277,7 @@ GameObject:
   - component: {fileID: 578477630}
   - component: {fileID: 578477629}
   m_Layer: 0
-  m_Name: ThumbTip
+  m_Name: ThumbTipL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2389,7 +2389,7 @@ GameObject:
   - component: {fileID: 1107986859}
   - component: {fileID: 1107986858}
   m_Layer: 0
-  m_Name: ThumbTip
+  m_Name: ThumbTipR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2753,7 +2753,7 @@ GameObject:
   - component: {fileID: 1335554140}
   - component: {fileID: 1335554139}
   m_Layer: 0
-  m_Name: IndexTip
+  m_Name: IndexTipR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3020,7 +3020,7 @@ GameObject:
   - component: {fileID: 1494080105}
   - component: {fileID: 1494080104}
   m_Layer: 0
-  m_Name: MiddleTip
+  m_Name: MiddleTipL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
