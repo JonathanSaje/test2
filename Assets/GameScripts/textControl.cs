@@ -86,7 +86,8 @@ public class textControl : MonoBehaviour {
 
             if (randQuestion == -1) {
                 if (sceneName == "test0") {
-                    randQuestion = UnityEngine.Random.Range(1,4);
+                    int availableQIndex = rnd.Next(availableQuestions.Count);
+                    randQuestion = availableQuestions[availableQIndex];
                 }
                 if (sceneName == "test1" || sceneName == "test4") {
                     int availableQIndex = rnd.Next(availableQuestions.Count);
@@ -184,6 +185,12 @@ public class textControl : MonoBehaviour {
             for (int i = 1; i < correctSubList.Count+1; i++ ) {
                 useChecker.Add(i,4);
 
+            }
+        }
+        else if (sceneName == "test0") {
+            correctSubList = correctAnswer.GetRange(1,3);
+            for (int i = 1; i < correctSubList.Count+1; i++ ) {
+                useChecker.Add(i,4);
             }
         }
 
